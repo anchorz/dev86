@@ -7,7 +7,7 @@ lib/libdos.a : obj obj/__mkargv.o
 	if [ -e lib/libdos.a_supersede ]  ; then mv lib/libdos.a_supersede lib/libdos.a; fi
 	
 lib/libz.a:  obj obj/crc32_asm.o #crc32.c is for reference only
-	ar86 q $@ obj/crc32_asm.o
+	ar86 r $@ obj/crc32_asm.o
 	
 obj:
 	mkdir obj
